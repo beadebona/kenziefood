@@ -1,0 +1,489 @@
+/* START imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500&display=swap');
+/* END imports */
+
+
+
+/* START general */
+.flex{
+    display: flex;
+    align-items: center;
+}
+.spaceBetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* END general */
+
+/* START body */
+body{
+    padding-top: 160px;
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 32px;
+
+    transition: 0.5s;
+}
+
+/* END body */
+
+/* START header */
+header{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+header .logotipo img{
+    width: 122px;
+    height: 33px;
+
+    padding: 10px 0;
+
+}
+
+.flex2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .barraDePesquisa{
+    max-width: 342px;
+    width: 60%;
+    height: 49px;
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: #868E96;
+}
+
+header .barraDePesquisa input{
+    border: none;
+    background: transparent;
+    height:100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    outline: none;
+}
+
+.log{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 0 10px;
+    height: 49px;
+    background-color: #FF2253;
+    color: white;
+    border-radius: 12px;
+    padding: 0 15px;
+}
+
+.log p {
+    display: none;
+}
+
+#dashboard{
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF; 
+    color: #868E96;
+}
+
+/* END header */
+
+/* START main */
+main {
+    padding: 0px 5% 40px;
+
+}
+
+nav{
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+
+}
+
+nav button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #F8F9FA;
+    box-sizing: border-box;
+    margin-right: 22px;
+    transition: 0.5s;
+
+}
+
+nav button img{
+    margin-right: 15px;
+}
+
+.vitrine{
+    margin-top: 50px;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.vitrine .cartaoProduto{
+    max-width: 300px;
+    width: 80vw;
+    height: 400px;
+    scroll-snap-align: start;
+    margin-bottom: 40px;
+}
+
+.imgProduto{
+    border: 3px solid #FFE9EE;
+    border-radius: 5px;
+    transition: 0.5s;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+p{
+    font-size:14px;
+    transition: 0.5s;
+}
+
+.descricao{
+    color:#868E96;
+
+}
+
+.vitrine h2{
+    margin: 24px 0 16px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.vitrine .descricao{
+    height: 60px;
+}
+
+.categoria{
+    font-size: 12px;
+    margin: 12px 0 ;
+    color: #868E96;
+
+}
+
+.vitrine li{
+    margin-right: 19px;
+}
+
+.vitrine .preco{
+    justify-content: space-between;
+    padding-top: 6px;
+}
+
+.vitrine .preco button{
+    width:38px;
+    height:38px;
+    background-color: #E4F7EF;
+    color: #0CA678;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* END main */
+
+/* START aside */
+aside{
+    display: none;
+}
+
+/* END aside */
+
+/* START footer */
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+}
+
+#carrinho{
+    border-radius: 0;
+}
+
+/* END footer */
+
+/* START modal */
+.modalBase{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modalConteudo{
+    margin: 5%;
+    border-radius: 15px;
+    height: 90%;
+    display: block;
+
+}
+
+.cabecalho {
+    background-color: #FF2253;
+    font-weight:500;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15.0938px 15.0938px 0px 0px;
+    color: #fff;
+}
+
+.fecharModal{
+    background: transparent;
+    color: white;
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.vazio {
+    height: 70%;
+    background-color: #F8F9FA;
+    color:#868E96;
+    font-weight: 400;
+    text-align: center;
+}
+
+.imagemCarrinho{
+    border-radius: 8px;
+    width: 70px;
+    height: 70px;
+}
+
+.removerCarrinho{
+    color:#868E96;
+    background-color:#F8F9FA;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+}
+.cartaoCarrinho{
+    background-color: #fff;
+}
+.precoFinal, .quantidade{
+    color:#000;
+    height: 58px;
+    padding: 0 18px;
+}
+
+.body{
+    display: block;
+    overflow-x: auto;  
+    color: #000;
+    background-color: #F8F9FA;
+    height: 70%;
+}
+
+.quantidade{
+    background-color: #F8F9FA;
+}
+
+.precoFinal{
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.informacao{
+    padding-left: 12px;
+    width: 80%;
+}
+
+.nome{
+    max-width: 18ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vazio {
+    display: block;
+    background-color: #F8F9FA;
+    color:#868E96;
+    font-weight: 400;
+    text-align: center;
+}
+
+.vazio img{
+    margin-top: 120px;
+    padding: 35px;
+}
+
+.body li{
+    padding: 20px 10px;
+    background-color:#FFFFFF;   
+}
+
+/* END modal */
+
+/* START extras */
+div.barraDePesquisa:focus-within{
+    background-color:#F8F9FA;
+    border: 1.5px solid #212529;
+}
+
+nav button:active{
+    color: #fff;
+    background-color:#FF2253;
+
+}
+
+li:hover .imgProduto{
+    border: 3px solid #FF2253;
+}
+
+li:hover p{
+    color: #000;
+}
+
+.vitrine .preco button:hover{
+    background-color: #0CA678;
+    color: #E4F7EF;
+}
+
+.cartaoCarrinho button:hover{
+    color:#F8F9FA;
+    background-color:#868E96;
+}
+
+.log:hover{
+    color:#F8F9FA;
+    background-color:#868E96;
+}
+.fa-cart-arrow-down, .fa-magnifying-glass{
+    padding: 0 20px;
+}
+
+#dashboard:hover{
+    background-color: #868E96;
+    border: 1.5px solid #E9ECEF; 
+    color: #E9ECEF;
+}
+/* END extras */
+
+/* START media queries */
+
+@media screen and (min-width: 600px) and (max-device-width: 1000px) { 
+    body{
+        padding-top: 90px;
+    }
+
+    header {
+        display: flex;
+        width: 90%;
+        height:72px;
+        box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+        flex-direction: row;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .barraDePesquisa{
+        width: 342px;
+    }
+
+
+    main{
+        padding-left: 5%;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    body{
+        padding-top: 90px;
+    }
+
+    header {
+        display: flex;
+        width: 90%;
+        padding: 10px 5%;
+        height:72px;
+        box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+        flex-direction: row;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .log p {
+        display:block;
+    }
+
+    main{
+        padding-left: 5%;
+    }
+    .vitrine{
+        flex-wrap: wrap;
+        width:80%;
+        height: 830px;
+        overflow-x: unset;
+    }
+
+    footer{
+        display: none;
+    }
+    /* START aside */
+    aside{
+        display: block;
+        max-width: 350px;
+        width: 25vw;
+        height:520px;
+        color: #fff;
+    }
+
+   .body.carrinho{
+    max-height: 380px;
+    min-height: 380px
+   }
+   .corpo{
+       display: flex;
+   }
+    .modalBase{
+        display:none;
+    }
+
+    .body{
+        height: 320px;
+    }
+ 
+}
+/* END media queries */
+
+.hidden{
+    display: none;
+}
+
+.navAtual{
+    color: #fff;
+    background-color:#FF2253;
+
+}

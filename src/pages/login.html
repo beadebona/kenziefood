@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>Kenzie Food</title>
+</head>
+<body>
+  <header>
+    <div class="flex" id="tituloBox">
+      <h2 class="KenzieFoodLogo">Kenzie</h2>
+      <h3 class="KenzieFoodLogo">Food</h3>
+    </div>
+  </header>
+  <main>
+    <nav class="flex">
+      <button class="botaoNav botaoSelecionado" id="botaoLogin">Login</button>
+      <button class="botaoNav" id="botaoCadastro">Cadastre-se</button>
+    </nav>
+    <form id="formLogin" class="flex-col">
+      <input type="email" name="email" id="emailLogin" placeholder="E-mail" required>
+      <input type="password" name="password" id="senhaLogin" placeholder="Senha" required>
+      <div class="flex" id="conectado">
+        <input id="checkbox" type="checkbox">
+        <label for="checkbox" class="flex">Mantenha-me Conectado</label>
+      </div>
+      <button type="submit" id="entrarLogin">Entrar</button>
+    </form>
+    <form id="formCadastro" class="hidden flex-col">
+      <input type="text" name="name" id="nomeCadastro" placeholder="Nome" required>
+      <input type="email" name="email" id="emailCadastro" placeholder="E-mail" required>
+      <input type="password" name="password" id="senhaCadastro" placeholder="Senha" required>
+      <button id="cadastrar">Cadastrar</button>
+    </form>
+  </main>
+  <script type="module" src="../js/controllers/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* START imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500&display=swap');
+/* END imports */
+
+/* START general */
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.spaceBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* END general */
+
+/* START html */
+/* END html */
+
+/* START body */
+body{
+  padding-top: 160px;
+  font-family: 'Poppins', sans-serif;
+}
+button{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  transition: 0.3s;
+}
+/* END body */
+
+/* START header */
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+header div {
+  justify-content: center;
+  margin-top: 50px;
+}
+#tituloBox {
+  width: 100%;
+}
+header h2{
+  font-weight: 900;
+  font-size: 33px;
+  color: #212529;
+}
+header h3{
+  margin-left: 7px;
+  font-weight: 900;
+  font-size: 27px;
+  color: #FF2253;
+}
+/* END header */
+
+
+/* START main */
+main {
+  padding: 0 5% 60px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+nav{
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.botaoNav {
+  background-color: #fff;
+  color: #212529;
+  font-size: 12px;
+  margin-bottom: 14px;
+  padding: 10px 15px;
+}
+
+#botaoLogin {
+  margin-right: 7px;
+}
+
+.botaoSelecionado {
+  background-color: #FF2253;
+  color: #fff;
+}
+
+main form input {
+  padding: 15px 20px;
+  margin-top: 30px;
+  height: 49px;
+  background-color: #E9ECEF;
+  border: 1.5px solid #E9ECEF;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: #868E96;
+}
+
+main form input:focus-within{
+  background-color:#F8F9FA;
+  border: 1.5px solid #212529;
+}
+
+main form label {
+  margin-top: 30px;
+  text-transform: lowercase;
+  font-size: 10px;
+  color: #212529;
+}
+
+form button {
+  padding: 15px 20px;
+  background-color: #FF2253;
+  box-sizing: border-box;
+  color: #F8F9FA;
+  border: 1px solid #F8F9FA;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+/* END main */
+
+/* START footer */
+/* END footer */
+
+/* START extras */
+
+/* END extras */
+
+/* START media queries */
+@media screen and (min-width: 700px){
+  header h2{
+    font-weight: 900;
+    font-size: 45px;
+    color: #212529;
+  }
+  header h3{
+    margin-left: 7px;
+    font-weight: 900;
+    font-size: 39px;
+    color: #FF2253;
+  }
+  nav {
+    margin-top: 15px;
+  }
+  .botaoNav {
+    font-size: 16px;
+  }
+  main {
+    padding: 40px 5%;
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+    max-width: 475px;
+  }
+  main form label {
+    font-size: 14px;
+    margin-left: 3px;
+  }
+}
+/* END media queries */

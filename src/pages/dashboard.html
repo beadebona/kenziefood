@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Kenzie Food</title>
+
+    <script src="https://kit.fontawesome.com/82a0edcc7f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="">
+        <div class="logotipo flex" id="LogoKenzieFoodDash">
+            <img src="../img/Group 1075.png" alt="Logo">
+        </div>
+       
+        <section class="flex">
+            <div class="barraDePesquisa flex">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar por produto" id="barraDePesquisaDB"> 
+            </div> 
+            <button class="log" id="dashboard1"><i class="fa-solid fa-user"></i></button> 
+            <div class="alert">
+                <p>Time A</p>
+                <button id="logOutDash">LogOut</button>
+            </div>       
+        </section>
+    </header>
+
+    <main id="dashboard">
+
+        <nav class="flex">
+            <div class="flex">
+                <button class="botaoNavDB navAtual" value="todos">Todos</button>
+                <button class="flex botaoPadraoBranco botaoNavDB " value="Panificadora"> <img src="../img/Icon_bread.png" alt="">Panificadora</button>
+                <button class="flex botaoPadraoBranco botaoNavDB" value="Frutas"> <img src="../img/Icon_fruits.png" alt="">Frutas</button>
+                <button class="flex botaoPadraoBranco botaoNavDB" value="Bebidas"> <img src="../img/Icon_glass of wine.png" alt="">Bebidas</button>
+            </div>
+
+
+            <button id="botaoAddProduto" class="botaoPadrao">Adicionar produto</button>
+            
+            <section id="popUp" class="popUp flex">
+                
+                <div id="cabecalhoPopUp" class="cabecalhoPopUp flex">
+                    <h5>Cadastro de produtos</h5>
+                    <button id="botaoFecharPopUp" class="botaoFecharPopUp botaoPadraoBranco">x</button>
+                </div>
+        
+                <form id="formCads" class="popUpform flex-col">
+                    <label for="nomeProduto">Nome do produto</label>
+                    <input type="text" name="nome" placeholder="Nome do produto" class="popInput" required />
+        
+                    <label for="descricao">Descrição</label>
+                    <input type="textarea" name="descricao" placeholder="Descrição" class="popInput" required/>
+        
+                    <label for="categorias">Categorias</label>
+                    <div class="categoriasPopUp flex">
+                        <select name="categoria">
+                            <option value="Panificadora">Panificadora</option>
+                            <option value="Frutas">Frutas</option>
+                            <option value="Bebidas">Bebidas</option>
+                          </select>
+                    </div>
+        
+                    <label for="preco">Preço do produto</label>
+                    <input type="number" name="preco" placeholder="Preço do produto" class="popInput" required/>   
+                    
+                    <label for="imagem">Link da imagem</label>
+                    <input type="url" name="imagem" placeholder="Link da imagem" class="popInput" required/>
+        
+                    <button class="botaoPadrao botaoCadastro">Cadastrar produto</button>
+                </form>
+            </section>
+        </nav>
+
+            <section id="popUpEdicao" class="popUp flex">
+                
+                <div id="cabecalhoPopUpEdicao" class="cabecalhoPopUp flex">
+                    <h5>Edição do produto</h5>
+                    <button id="botaoFecharPopUpEdicao" class="botaoFecharPopUp botaoPadraoBranco">x</button>
+                </div>
+        
+                <form class="popUpform flex-col" id="popUpEditar">
+
+                </form>
+            </section>
+
+            <section id="popUpExclusao" class="popUp flex">
+                <div id="cabecalhoPopUpExclusao" class="cabecalhoPopUp flex">
+                    <h5>Exclusão do produto</h5>
+                    <button id="botaoFecharPopUpExclusao" name="voltar"class="botaoFecharPopUp botaoPadraoBranco botaoSair">x</button>
+                </div>
+                
+                <div class="popUpform popUpformExcluir">
+
+                </div>
+
+            </section>
+        
+        <ul>
+            <li id="legendasLista" class="flex">
+                <p class="legendaProduto">Produto</p>
+                <p class="legendaProduto">Categorias</p>
+                <p class="legendaProduto">Descrição</p>
+                <p class="legendaProduto">Ações</p>
+            </li>
+        </ul>
+
+        <ul class="vitrineDashboard">
+    
+        </ul>
+
+        <div class="notificacao">
+            <div class="notificacaoCabeca">
+                    Status
+                    <button  id="fechar" class="notificacaoButton">X</button>
+                    </div>
+                   <div class="notificacaoCorpo">
+                   Ocorreu algum erro, o produto não foi adicionado
+                    </div>
+        </div>
+    </main>
+    
+    <script type="module" src="../js/models/scriptDash.js"></script>
+</body>
+</html>
+

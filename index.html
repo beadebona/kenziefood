@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie food</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://kit.fontawesome.com/82a0edcc7f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="flex">
+        <div class="logotipo flex">
+            <img src="./src/img/Group 1075.png" alt="Logo">
+        </div>
+        <div class="flex2">
+                    <div class="barraDePesquisa flex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+             <input type="text" placeholder="Pesquisar por produto" id="barraDePesquisa"> 
+             
+        </div>
+
+        <button class="log" id="login"><i class="fa-solid fa-arrow-right-to-bracket"></i><p>Login</p></button>
+        <button class="log" id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></i><p>Sair</p></button>
+        <button class="log" id="dashboard"><i class="fa-solid fa-user"></i><p>Admin</p></button>
+        <!-- <button class = "log" id="checkout"><i class="fa-solid fa-cart-circle-check"></i></button> -->
+        </div>
+
+    </header>
+    <main>
+        <nav>
+            <button class="botaoNav navAtual"value="todos">Todos</button>
+            <button class="flex botaoNav" value="Panificadora"> <img src="./src/img/Icon_bread.png" alt="">Panificadora</button>
+            <button class="flex botaoNav" value="Frutas"> <img src="./src/img/Icon_fruits.png" alt="">Frutas</button>
+            <button class="flex botaoNav" value="Bebidas"> <img src="./src/img/Icon_glass of wine.png" alt="">Bebidas</button>
+        </nav>
+        <div class="corpo">
+            <ul class="vitrine">
+
+            </ul>
+
+            <aside>
+                <div class="cabecalho flex">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    Carrinho
+                </div >
+                 <div id="bannerVazio" class="body vazio">
+                    <img src="./src/img/Icon_bag.png" alt="">
+                    <h3>
+                        Por enquanto não temos produtos no carrinho
+                    </h3>
+                </div> 
+                <div id= "carrinhoAtivo" class="hidden">
+                    
+                    <ul class="body carrinho">
+                        
+                    </ul>
+                    <div class="quantidade spaceBetween">
+                        <p>Quantidade</p>
+                        <span id="quantidadeTotal">0</span>
+                    </div>
+                    <div class="precoFinal spaceBetween">
+                        <p>Total</p>
+                        
+                        <span id="precoTotal">R$0,00</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+    
+    <footer>
+        <div id="carrinho" class="cabecalho flex">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            Carrinho
+        </div >
+
+    </footer>
+    <div class="modalBase" >
+        <div class="modalConteudo">
+            <div class="cabecalho flex">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                Carrinho
+
+                <button class="fecharModal"><i class="fa-solid fa-xmark"></i></button>
+            </div >
+           
+            <ul class="body carrinho carrinhoModal">
+
+            </ul>
+        <div class="quantidade spaceBetween">
+            <p>Quantidade</p>
+            <span id="quantidadeTotalMobile">0</span>
+        </div>
+        <div class="precoFinal spaceBetween">
+            <p>Total</p>
+            
+            <span id="precoTotalMobile">R$0,00</span>
+        </div>
+
+        </div>
+    </div>
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>
